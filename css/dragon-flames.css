@@ -1,0 +1,168 @@
+.flame-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: -1;
+  filter: blur(3px);
+}
+
+.flame {
+  position: absolute;
+  bottom: -50%;
+  background: none;
+  border-radius: 50% 0 50% 50%;
+  transform: rotate(-45deg);
+  filter: drop-shadow(0 0 10px #ff4500);
+}
+
+.flame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ff4500, #ffd700);
+  border-radius: inherit;
+  animation: flameFlicker 0.5s infinite alternate;
+}
+
+@keyframes flameFlicker {
+  0% { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(1.2); opacity: 0.8; }
+}
+
+.foto-galeria {
+  position: relative;
+  overflow: visible !important;
+}
+
+.foto-galeria::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translateX(-50%) scale(0);
+  background: radial-gradient(circle at center, #ffd700, #ff4500);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  filter: blur(5px);
+}
+
+.foto-galeria:hover::before {
+  transform: translateX(-50%) scale(1);
+  animation: dragonBreath 1s infinite;
+}
+
+@keyframes dragonBreath {
+  0% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.5); }
+  100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+}
+
+.h1-dragon {
+  position: relative;
+  text-shadow: 0 0 10px #ff4500;
+}
+
+.h1-dragon::before,
+.h1-dragon::after {
+  content: '🐉';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.h1-dragon::before { left: -40px; }
+.h1-dragon::after { right: -40px; }
+
+.h1-dragon:hover::before,
+.h1-dragon:hover::after {
+  opacity: 1;
+  animation: dragonRoar 1s infinite;
+}
+
+@keyframes dragonRoar {
+  0%, 100% { transform: translateY(-50%) scale(1); }
+  50% { transform: translateY(-50%) scale(1.2); }
+}
+
+.ember-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ember {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ff4500;
+  box-shadow: 
+    0 0 10px #ff4500,
+    0 0 20px #ff7800,
+    0 0 30px #ffa500;
+  animation: float-ember 3s ease-in infinite;
+  opacity: 0;
+}
+
+@keyframes float-ember {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.foto-galeria:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: radial-gradient(circle at center, #ff4500 0%, transparent 70%);
+  animation: ember-glow 1s infinite alternate;
+}
+
+@keyframes ember-glow {
+  from { opacity: 0.5; transform: scaleY(1); }
+  to { opacity: 1; transform: scaleY(1.2); }
+}
+
+.flame::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  background: #ffd700;
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: ember-pulse 0.5s infinite alternate;
+}
+
+@keyframes ember-pulse {
+  from { transform: translateX(-50%) scale(1); opacity: 1; }
+  to { transform: translateX(-50%) scale(1.2); opacity: 0.5; }
+}

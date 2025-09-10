@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - A Casa do Dragão</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="theme-color" content="#1a1a2e">
+</head>
+<body>
+    <header>
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch" role="switch" aria-label="Alternar tema">
+            <label for="theme-switch" class="toggle-label">
+                <span class="sun" aria-hidden="true">☀️</span>
+                <span class="moon" aria-hidden="true">🌙</span>
+            </label>
+        </div>
+        <h1>A Casa do Dragão</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="elenco.html">Elenco</a>
+            <a href="galeria.html">Galeria</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="galeria">
+            <h2>Galeria de personagens</h2>
+            <div class="galeria-container">
+                <div class="foto-galeria">
+                    <img src="https://www.hollywoodreporter.com/wp-content/uploads/2022/08/HOTD_101_PD_00136R.jpg" 
+                         alt="Rhaenyra e Viserys"
+                         loading="lazy">
+                    <div class="descricao">Rhaenyra e Viserys no Trono de Ferro</div>
+                </div>
+                <div class="foto-galeria">
+                    <img src="https://www.tvinsider.com/wp-content/uploads/2022/08/house-of-the-dragon-steve-toussaint-lord-corlys.jpg" 
+                         alt="Corlys Velaryon"
+                         loading="lazy">
+                    <div class="descricao">Corlys Velaryon</div>
+                </div>
+                <div class="foto-galeria">
+                    <img src="https://sm.ign.com/ign_br/screenshot/default/olivia-cooke-alicent-hightower-house-of-the-dragon_48vr.1280.jpg" 
+                         alt="Alicent Hightower"
+                         loading="lazy">
+                    <div class="descricao">Alicent Hightower</div>
+                </div>
+                <div class="foto-galeria">
+                    <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/08/Small-Council-House-of-the-Dragon.jpg" 
+                         alt="Conselho Real"
+                         loading="lazy">
+                    <div class="descricao">Reunião do conselho real</div>
+                </div>
+                <div class="foto-galeria">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Dragon.jpg" 
+                         alt="Dragão sobrevoando"
+                         loading="lazy">
+                    <div class="descricao">Dragão sobrevoando Porto Real</div>
+                </div>
+                <div class="foto-galeria">
+                    <img src="https://www.tvinsider.com/wp-content/uploads/2022/09/house-of-the-dragon-fabien-frankel-criston-cole.jpg" 
+                         alt="Criston Cole"
+                         loading="lazy">
+                    <div class="descricao">Criston Cole</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 A Casa do Dragão. Todos os direitos reservados.</p>
+    </footer>
+
+    <style>
+        :root {
+            --bg-color: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --text-color: #fff;
+            --header-bg: rgba(34, 34, 34, 0.95);
+            --main-bg: rgba(34, 34, 34, 0.8);
+            --accent-color: #ffd700;
+        }
+
+        body.light-theme {
+            --bg-color: linear-gradient(135deg, #f5f7fa 0%, #e3e6e8 100%);
+            --text-color: #333;
+            --header-bg: rgba(255, 255, 255, 0.95);
+            --main-bg: rgba(255, 255, 255, 0.8);
+            --accent-color: #ff4500;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        header {
+            background: var(--header-bg);
+            padding: 25px 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0 0 15px 0;
+            font-size: 2.5em;
+            background: linear-gradient(to right, #ffd700, #ff4500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 80%;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: var(--main-bg);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .galeria h2 {
+            text-align: center;
+            font-size: 2em;
+            background: linear-gradient(to right, #ffd700, #ff4500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+        }
+
+        .galeria-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .foto-galeria {
+            background: var(--main-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .foto-galeria:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+        }
+
+        .foto-galeria img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .foto-galeria:hover img {
+            transform: scale(1.05);
+        }
+
+        .descricao {
+            padding: 15px;
+            font-size: 1.1em;
+            color: var(--text-color);
+            background: var(--main-bg);
+            backdrop-filter: blur(5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: var(--header-bg);
+            color: #aaa;
+            backdrop-filter: blur(10px);
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #theme-switch {
+            display: none;
+        }
+
+        .toggle-label {
+            cursor: pointer;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .sun, .moon {
+            font-size: 1.2em;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            main {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav {
+                gap: 20px;
+            }
+
+            nav a {
+                font-size: 1em;
+            }
+
+            .galeria-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+                padding: 10px;
+            }
+        }
+    </style>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

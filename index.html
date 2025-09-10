@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Casa do Dragão - Início</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch">
+            <label for="theme-switch" class="toggle-label">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+            </label>
+        </div>
+        <div class="logo">
+            <img src="https://cafecomnerd.com.br/wp-content/uploads/2022/09/A-Casa-do-Dragao-Trailer-episodio-6-salto-temporal-troca-de-elenco-serie-prequela-Game-of-Thrones.jpg" alt="Logo A Casa do Dragão" class="header-logo">
+        </div>
+        <h1>A Casa do Dragão</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="elenco.html">Elenco</a>
+            <a href="galeria.html">Galeria</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="historia-container">
+            <div class="imagem-principal">
+                <img src="https://cafecomnerd.com.br/wp-content/uploads/2022/09/A-Casa-do-Dragao-Trailer-episodio-6-salto-temporal-troca-de-elenco-serie-prequela-Game-of-Thrones.jpg" alt="A Casa do Dragão">
+            </div>
+            <div class="historia">
+                <h2>História e Desenvolvimento da Trama</h2>
+                <p>
+                    "A Casa do Dragão" (House of the Dragon) é uma série derivada do universo de "Game of Thrones", baseada no livro "Fogo & Sangue", de George R. R. Martin. A trama se passa cerca de 200 anos antes dos eventos de "Game of Thrones" e mergulha profundamente na história da Casa Targaryen, uma das famílias mais poderosas e temidas de Westeros.
+                </p>
+                <p>
+                    A série começa durante o reinado do Rei Viserys I Targaryen, um período de relativa paz e prosperidade para o reino. Viserys é um monarca gentil, mas sua decisão de nomear sua filha, a princesa Rhaenyra Targaryen, como herdeira do Trono de Ferro, rompe com séculos de tradição patriarcal e planta as sementes de um conflito devastador. Muitos nobres e membros da corte não aceitam uma mulher como sucessora, o que gera tensões crescentes dentro da própria família real.
+                </p>
+                <p>
+                    Paralelamente, Alicent Hightower, segunda esposa de Viserys, busca garantir o futuro de seus próprios filhos, especialmente Aegon II, como legítimo herdeiro. Essa disputa entre Rhaenyra e Aegon II divide a corte e o reino em dois lados: os "Pretos", que apoiam Rhaenyra, e os "Verdes", que apoiam Aegon II. O conflito se intensifica após a morte do rei, levando à famosa guerra civil conhecida como a Dança dos Dragões.
+                </p>
+                <p>
+                    A Dança dos Dragões é marcada por batalhas épicas, traições, assassinatos e a destruição de várias casas nobres. Dragões, símbolo máximo do poder Targaryen, são usados como armas de guerra, causando terror e devastação por toda Westeros. O conflito resulta em perdas irreparáveis para a Casa Targaryen, incluindo a morte de muitos de seus dragões e membros da família.
+                </p>
+                <p>
+                    Ao longo da série, o espectador acompanha não apenas as batalhas e intrigas políticas, mas também os dilemas pessoais dos personagens, suas ambições, medos e sacrifícios. "A Casa do Dragão" explora temas como poder, lealdade, tradição, e o preço da ambição, mostrando como decisões individuais podem mudar o destino de um reino inteiro.
+                </p>
+                <p>
+                    O desenvolvimento da trama é denso e repleto de reviravoltas, mantendo o clima sombrio e imprevisível característico do universo criado por George R. R. Martin. A série aprofunda a mitologia dos Targaryen e revela como a busca pelo poder absoluto pode levar à ruína até mesmo das dinastias mais poderosas.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025</p>
+    </footer>
+
+    <style>
+        :root {
+            --bg-color: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --text-color: #fff;
+            --header-bg: rgba(34, 34, 34, 0.95);
+            --main-bg: rgba(34, 34, 34, 0.8);
+            --accent-color: #ffd700;
+        }
+
+        body.light-theme {
+            --bg-color: linear-gradient(135deg, #f5f7fa 0%, #e3e6e8 100%);
+            --text-color: #333;
+            --header-bg: rgba(255, 255, 255, 0.95);
+            --main-bg: rgba(255, 255, 255, 0.8);
+            --accent-color: #ff4500;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        header {
+            background: var(--header-bg);
+            padding: 25px 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0 0 15px 0;
+            font-size: 2.5em;
+            background: linear-gradient(to right, #ffd700, #ff4500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            color: var(--text-color); /* Alterado para usar a cor do tema */
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--accent-color); /* Alterado para usar a cor de destaque do tema */
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-color); /* Adicionado efeito hover */
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background: var(--main-bg);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .historia-container {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .imagem-principal {
+            flex: 0 0 40%;
+        }
+
+        .imagem-principal img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .historia {
+            flex: 0 0 55%;
+        }
+
+        .historia h2 {
+            margin-top: 0;
+            font-size: 2em;
+            background: linear-gradient(to right, #ffd700, #ff4500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+        }
+
+        .historia p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(34, 34, 34, 0.95);
+            color: #aaa;
+            margin-top: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #theme-switch {
+            display: none;
+        }
+
+        .toggle-label {
+            cursor: pointer;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .sun, .moon {
+            font-size: 1.2em;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .header-logo {
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .header-logo:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        main {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav {
+                gap: 20px;
+            }
+
+            nav a {
+                font-size: 1em;
+            }
+
+            .header-logo {
+                width: 100px;
+            }
+
+            .historia-container {
+                flex-direction: column;
+            }
+
+            .imagem-principal, .historia {
+                flex: 1 0 100%;
+            }
+        }
+    </style>
+
+    <script>
+        const themeSwitch = document.getElementById('theme-switch');
+        
+        themeSwitch.addEventListener('change', function() {
+            document.body.classList.toggle('light-theme');
+            
+            const theme = document.body.classList.contains('light-theme') ? 'light' : 'dark';
+            localStorage.setItem('theme', theme);
+        });
+
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-theme');
+            themeSwitch.checked = true;
+        }
+    </script>
+</body>
+</html>

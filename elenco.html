@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elenco Principal - House of the Dragon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --text-color: #fff;
+            --header-bg: rgba(34, 34, 34, 0.95);
+            --main-bg: rgba(34, 34, 34, 0.8);
+            --accent-color: #ffd700;
+        }
+
+        body.light-theme {
+            --bg-color: linear-gradient(135deg, #f5f7fa 0%, #e3e6e8 100%);
+            --text-color: #333;
+            --header-bg: rgba(255, 255, 255, 0.95);
+            --main-bg: rgba(255, 255, 255, 0.8);
+            --accent-color: #ff4500;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        header {
+            background: var(--header-bg);
+            padding: 25px 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0 0 15px 0;
+            font-size: 2.5em;
+            background: linear-gradient(to right, #ffd700, #ff4500);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-color); /* Mudança aqui para usar a variável de cor do texto */
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--accent-color); /* Mudança aqui para usar a variável de cor de destaque */
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 80%;
+        }
+
+        .elenco-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .personagem {
+            background: #222;
+            border-radius: 10px;
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+        }
+        .nome {
+            margin-top: 0;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .ator {
+            font-size: 0.95em;
+            color: #ccc;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch" role="switch" aria-label="Alternar tema">
+            <label for="theme-switch" class="toggle-label">
+                <span class="sun" aria-hidden="true">☀️</span>
+                <span class="moon" aria-hidden="true">🌙</span>
+            </label>
+        </div>
+        <h1>A Casa do Dragão</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="elenco.html">Elenco</a>
+            <a href="galeria.html">Galeria</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Elenco Principal - House of the Dragon</h1>
+        <div class="elenco-container">
+            <div class="personagem">
+                <div class="nome">Rhaenyra Targaryen</div>
+                <div class="ator">Emma D'Arcy</div>
+            </div>
+            <div class="personagem">
+                <div class="nome">Daemon Targaryen</div>
+                <div class="ator">Matt Smith</div>
+            </div>
+            <div class="personagem">
+                <div class="nome">Alicent Hightower</div>
+                <div class="ator">Olivia Cooke</div>
+            </div>
+            <div class="personagem">
+                <div class="nome">Otto Hightower</div>
+                <div class="ator">Rhys Ifans</div>
+            </div>
+            <div class="personagem">
+                <div class="nome">Corlys Velaryon</div>
+                <div class="ator">Steve Toussaint</div>
+            </div>
+            <div class="personagem">
+                <div class="nome">Viserys I Targaryen</div>
+                <div class="ator">Paddy Considine</div>
+            </div>
+            <div class="personagem">
+                <div class="nome">Rhaenys Targaryen</div>
+                <div class="ator">Eve Best</div>
+            </div>
+            <div class="personagem">
+                <div class="nome">Criston Cole</div>
+                <div class="ator">Fabien Frankel</div>
+            </div>
+            <div class="personagem">
+                <div class="nome">Laenor Velaryon</div>
+                <div class="ator">John Macmillan</div>
+            </div>
+            <div class="personagem">
+                <div class="nome">Laena Velaryon</div>
+                <div class="ator">Nanna Blondell</div>
+            </div>
+            <div class="personagem">
+                <div class="nome">Harwin Strong</div>
+                <div class="ator">Ryan Corr</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 A Casa do Dragão. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const themeSwitch = document.getElementById('theme-switch');
+        
+        themeSwitch.addEventListener('change', function() {
+            document.body.classList.toggle('light-theme');
+            
+            // Salvar preferência no localStorage
+            const theme = document.body.classList.contains('light-theme') ? 'light' : 'dark';
+            localStorage.setItem('theme', theme);
+        });
+
+        // Verificar tema salvo
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-theme');
+            themeSwitch.checked = true;
+        }
+    </script>
+</body>
+</html>

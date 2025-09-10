@@ -1,0 +1,250 @@
+<!-- elenco.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elenco - A Casa do Dragão</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --text-color: #fff;
+            --header-bg: rgba(34, 34, 34, 0.95);
+            --main-bg: rgba(34, 34, 34, 0.8);
+            --accent-color: #ffd700;
+        }
+
+        body.light-theme {
+            --bg-color: linear-gradient(135deg, #f5f7fa 0%, #e3e6e8 100%);
+            --text-color: #333;
+            --header-bg: rgba(255, 255, 255, 0.95);
+            --main-bg: rgba(255, 255, 255, 0.8);
+            --accent-color: #ff4500;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        header {
+            background: var(--header-bg);
+            padding: 25px 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0 0 15px 0;
+            font-size: 2.5em;
+            background: linear-gradient(to right, #ffd700, #ff4500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 80%;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background: var(--main-bg);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info h2 {
+            margin-top: 0;
+            font-size: 2em;
+            background: linear-gradient(to right, #ffd700, #ff4500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+        }
+
+        .info p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .info strong {
+            color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: var(--header-bg);
+            color: var(--text-color);
+            margin-top: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #theme-switch {
+            display: none;
+        }
+
+        .toggle-label {
+            cursor: pointer;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .sun, .moon {
+            font-size: 1.2em;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        main {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            main {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav {
+                gap: 20px;
+            }
+
+            nav a {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch">
+            <label for="theme-switch" class="toggle-label">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+            </label>
+        </div>
+        <h1>A Casa do Dragão</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="elenco.html">Elenco</a>
+            <a href="galeria.html">Galeria</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="info">
+            <h2>Informações da Série</h2>
+            <p>
+                <strong>Título original:</strong> House of the Dragon<br>
+                <strong>Gênero:</strong> Drama, Fantasia, Ação<br>
+                <strong>País de origem:</strong> Estados Unidos<br>
+                <strong>Idioma original:</strong> Inglês<br>
+                <strong>Temporadas:</strong> 2 (em andamento)<br>
+                <strong>Episódios:</strong> 20 (até o momento)<br>
+                <strong>Exibição:</strong> HBO / HBO Max<br>
+                <strong>Estreia:</strong> 21 de agosto de 2022<br>
+                <strong>Criadores:</strong> Ryan Condal, George R. R. Martin<br>
+                <strong>Baseado em:</strong> "Fogo & Sangue", de George R. R. Martin<br>
+                <strong>Sinopse:</strong> <br>
+                "A Casa do Dragão" é um prelúdio de "Game of Thrones" e narra a história da Casa Targaryen, cerca de 200 anos antes dos eventos da série original. A trama acompanha a ascensão e queda dos Targaryen, focando na guerra civil conhecida como a Dança dos Dragões, um conflito sangrento pelo Trono de Ferro.
+            </p>
+        </section>
+
+       
+    </main>
+
+    <footer>
+        <p>&copy; 2025 A Casa do Dragão. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const themeSwitch = document.getElementById('theme-switch');
+        
+        themeSwitch.addEventListener('change', function() {
+            document.body.classList.toggle('light-theme');
+            localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+        });
+
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-theme');
+            themeSwitch.checked = true;
+        }
+    </script>
+</body>
+</html>
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-theme');
+            themeSwitch.checked = true;
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
